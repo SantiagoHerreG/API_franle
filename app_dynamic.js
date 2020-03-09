@@ -15,14 +15,18 @@ const url = 'mongodb://35.190.175.59:27017/franle';
 const connect = mongoose.connect(url);
 
 connect.then((db) => {
-  console.log('Connected to mongoDB');
+  console.log('Connected to', url);
 }, (err) => {
   console.log(err);
 });
 
 const app = express();
 
-app.use(bParser.json());
+app.use((req, res, next) => {
+  var ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
+  console.log('Request:', req.method, req.originalUrl, ip);
+  next();
+}, bParser.json());
 
 app.get('/users', (req, res, next) => {
   Users.find()
