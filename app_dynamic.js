@@ -11,7 +11,7 @@ const Chats = require('./models/chats');
 const hostname = '0.0.0.0';
 const port = 5000;
 
-const url = 'mongodb://34.74.7.41/franle';
+const url = 'mongodb://34.74.7.41:27017/franle';
 const connect = mongoose.connect(url);
 
 connect.then((db) => {
