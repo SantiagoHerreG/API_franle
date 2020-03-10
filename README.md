@@ -13,7 +13,7 @@ Run with `npm start`
 
 ### Object Schemas
 
-####Users:
+#### Users:
 
 Endpoints:
 
@@ -27,7 +27,7 @@ Endpoints:
 
 + /users/:username [DELETE]
 
-####Chats:
+#### Chats:
 
 Endpoints:
 
@@ -37,7 +37,7 @@ Endpoints:
 
 + /chats/:chatId [DELETE]
 
-####Message:
+#### Message:
 
 Endpoints:
 
