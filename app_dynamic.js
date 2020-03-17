@@ -1,5 +1,3 @@
-#!/usr/bin/node
-
 const express = require('express');
 const http = require('http');
 const bParser = require('body-parser');
@@ -12,12 +10,14 @@ const hostname = '0.0.0.0';
 const port = 5000;
 
 const url = 'mongodb://34.74.7.41:27017/franle';
-const connect = mongoose.connect(url);
 
-connect.then((db) => {
-  console.log('Connected to', url);
-}, (err) => {
-  console.log(err);
+mongoose.connect(url).then((db, err) => {
+  if (err) {
+    console.log(err);
+  }
+  else {
+    console.log('Connected to', url);
+  }
 });
 
 const app = express();
@@ -46,6 +46,7 @@ app.get('/users', (req, res, next) => {
 app.post('/users', (req, res, next) => {
   Users.create(req.body)
     .then((user) => {
+      res.statusCode = 201;
       res.setHeader('Content-Type', 'application/json');
       res.json(user);
       console.log(user);
@@ -111,6 +112,7 @@ app.delete('/users/:username', (req, res, next) => {
 app.post('/chats', (req, res, next) => {
   Chats.create(req.body)
     .then((chat) => {
+      res.statusCode = 201;
       res.setHeader('Content-Type', 'application/json');
       res.json(chat);
       console.log(chat);
@@ -131,6 +133,7 @@ app.post('/message/:chatId', (req, res, next) => {
     new: true
   })
     .then(() => {
+      res.statusCode = 201;
       res.setHeader('Content-Type', 'application/json');
       res.json(req.body);
     }, (err) => {
@@ -172,3 +175,5 @@ app.get('/chats/:chatId', (req, res, next) => {
 const server = http.createServer(app).listen(port, hostname, () => {
   console.log(`Server running at http://${hostname}:${port}/`);
 });
+
+module.exports = server;
