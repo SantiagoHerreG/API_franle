@@ -4,12 +4,17 @@
 
 + NodeJS
 + Mongoose
++ Express
++ Mocha
++ Chai
 
 ### Usage:
 
 Install all necessary dependencies with `npm install`
 
 Run with `npm start`
+
+Run tests with `npm test`
 
 ### Object Schemas
 
