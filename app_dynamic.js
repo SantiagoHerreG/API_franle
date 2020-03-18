@@ -65,8 +65,11 @@ app.get('/users/:username', (req, res, next) => {
     username: req.params.username
     })
   .then((user) => {
+    if (user.length === 0) {
+      res.statusCode = 404;
+    };
     res.setHeader('Content-Type', 'application/json');
-    res.json(user);
+    res.json(user[0]);
   }, (err) => {
     next(err);
   })
