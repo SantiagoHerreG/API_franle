@@ -4,13 +4,21 @@
   "description": "",
   "main": "app_dynamic.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha --timeout 120000",
     "start": "node app_dynamic"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
+    "mongodb": "^3.5.5",
     "mongoose": "^5.9.4"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
+    "mocha": "^7.1.0",
+    "mockgoose": "^8.0.4",
+    "mongod": "^2.0.0"
   }
 }
