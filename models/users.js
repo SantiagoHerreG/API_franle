@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
+/* The every has unique username and has to be over 18 years */
 const userSchema = new Schema({
 
   username: {
@@ -21,10 +22,10 @@ const userSchema = new Schema({
     type: Array,
     required: true
   }
-},{
+},
+{
   timestamps: true
 });
 
 var Users = mongoose.model('User', userSchema);
-
 module.exports = Users;

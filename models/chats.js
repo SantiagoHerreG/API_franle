@@ -1,6 +1,7 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
+/* Message schema contains username and optional message */
 const messageSchema = new Schema({
   message: {
     type: String,
@@ -10,10 +11,12 @@ const messageSchema = new Schema({
     type: String,
     required: true
   }
-},{
+},
+{
   timestamps: true
 });
 
+/* Chat schema only needs usernames and array of messages */
 const chatSchema = new Schema({
 
   usernameA: {
@@ -25,10 +28,10 @@ const chatSchema = new Schema({
     required: true
   },
   messages: [ messageSchema ]
-},{
+},
+{
   timestamps: true
 });
 
 var Chats = mongoose.model('Chat', chatSchema);
-
 module.exports = Chats;
