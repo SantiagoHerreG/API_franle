@@ -1,6 +1,13 @@
 # REST API: Franle
 
-### Share and learn languages anonymously. The API REST is the web service to interact between the mobile app and the MONGODB database. This project is part of Holberton School (9 months foundations) coursework.
+## Introduction:
+#### Share and learn languages anonymously. The API REST is the web service to interact between the mobile app and the MONGODB database. This project is part of Holberton School (9 months foundations) coursework.
+
+Landing Page: https://dario-castano.github.io/franle/
+
+Blog post: not available
+
+LinkedIn: www.linkedin.com/in/santiago-herrera-gomez
 
 ## Implemented making use of:
 
