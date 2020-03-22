@@ -1,14 +1,14 @@
 # REST API: Franle
 
-### Share and learn languages anonymously. Web sockets is the protocol to establish fast and secure connections between clients. This project is part of Holberton School (9 months foundations) coursework.
+### Share and learn languages anonymously. The API REST is the web service to interact between the mobile app and the MONGODB database. This project is part of Holberton School (9 months foundations) coursework.
 
 ## Implemented making use of:
 
-+ NodeJS
-+ Mongoose
-+ Express
-+ Mocha
-+ Chai
++ NodeJS (JavaScript package)
++ Mongoose (Object Data Model)
++ Express (Application server- router)
++ Mocha (Testing)
++ Chai (Assertions)
 
 ### Installation:
 
