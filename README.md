@@ -1,5 +1,7 @@
 # REST API: Franle
 
+### Share and learn languages anonymously. Web sockets is the protocol to establish fast and secure connections between clients. This project is part of Holberton School (9 months foundations) coursework.
+
 ## Implemented making use of:
 
 + NodeJS
@@ -8,15 +10,16 @@
 + Mocha
 + Chai
 
-### Usage:
+### Installation:
 
+Clone the repo with `git clone [path]`
 Install all necessary dependencies with `npm install`
+
+### Usage
 
 Run with `npm start`
 
 Run tests with `npm test`
-
-### Object Schemas
 
 #### Users:
 
@@ -47,3 +50,13 @@ Endpoints:
 Endpoints:
 
 + /message/:chatId [POST] data = {[message], username}
+
+### Contributing:
++ Santiago Herrera
++ Juan Diego Arango
++ Dario Castañeda
+
+### Related projects:
+
+This API REST is part of the Franle mobile app development.
+git clone `https://github.com/jdarangop/franle_app.git`
